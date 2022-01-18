@@ -1,6 +1,7 @@
 package study;
 
 import java.io.File;
+
 import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -22,10 +23,12 @@ public class xmlDomParsingTest {
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document document = db.parse(file);
+		//getDocumentElement().normalize() XML의 최상위 tag 값을 가져옴
 		document.getDocumentElement().normalize();
 		System.out.println("Root Element : "+ document.getDocumentElement().getNodeName());
 		//nList에 tagname이 book인 요소를 삽입
 		NodeList nList = document.getElementsByTagName("book");
+		System.out.println("nList의 개수 "+ nList.getLength());
 		System.out.println("--------------------");
 		for(int temp =0; temp<nList.getLength();temp++) {
 			//nList의 temp번째 요소를 nNode에 삽입
