@@ -1,6 +1,7 @@
 package saxparser;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -29,7 +30,8 @@ public class xmlSaxParsingTest {
 			System.out.println("author: "+b.getAuthor());
 			System.out.println("year: "+b.getYear());
 			System.out.println("price: "+b.getPrice());
-			System.out.println();
+			System.out.println("*************************");
+			
 		
 		}
 		

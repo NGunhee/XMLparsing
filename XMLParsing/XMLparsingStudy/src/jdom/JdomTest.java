@@ -33,6 +33,7 @@ public class JdomTest {
 			Element e_basic = (Element)l_basic.get(i);
 			System.out.println(e_basic.getName());
 			System.out.println(e_basic.getText());
+			
 		}
 
 	}

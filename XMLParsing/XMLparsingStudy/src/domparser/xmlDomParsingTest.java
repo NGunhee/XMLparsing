@@ -3,6 +3,7 @@ package domparser;
 import java.io.File;
 
 
+
 import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -29,13 +30,12 @@ public class xmlDomParsingTest {
 		System.out.println("Root Element : "+ document.getDocumentElement().getNodeName());
 		//nList에 tagname이 book인 요소를 삽입
 		NodeList nList = document.getElementsByTagName("book");
-		System.out.println("nList의 개수 "+ nList.getLength());
 		System.out.println("--------------------");
 		for(int temp =0; temp<nList.getLength();temp++) {
 			//nList의 temp번째 요소를 nNode에 삽입
 			Node nNode = nList.item(temp);
 			//현재 노드의 이름을 출력
-			System.out.println("\nCurrent Element :"+ nNode.getNodeName());
+			System.out.println("Current Element :"+ nNode.getNodeName());
 			//nNode의 노드타입이 Node의 타입과 같으면
 			if(nNode.getNodeType()==Node.ELEMENT_NODE) {
 				//nNode를 Element로 다운캐스팅
@@ -47,6 +47,7 @@ public class xmlDomParsingTest {
 				System.out.println("author : "+eElement.getElementsByTagName("author").item(0).getTextContent());
 				System.out.println("year : "+eElement.getElementsByTagName("year").item(0).getTextContent());
 				System.out.println("price : "+eElement.getElementsByTagName("price").item(0).getTextContent());
+				System.out.println("**************************");
 				
 			}
 			
