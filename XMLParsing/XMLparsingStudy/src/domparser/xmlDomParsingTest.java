@@ -1,6 +1,7 @@
-package study;
+package domparser;
 
 import java.io.File;
+
 
 import java.io.IOException;
 
@@ -37,7 +38,7 @@ public class xmlDomParsingTest {
 			System.out.println("\nCurrent Element :"+ nNode.getNodeName());
 			//nNode의 노드타입이 Node의 타입과 같으면
 			if(nNode.getNodeType()==Node.ELEMENT_NODE) {
-				
+				//nNode를 Element로 다운캐스팅
 				Element eElement = (Element) nNode;
 				//getAttribute로 요소의 속성을 가져옴
 				System.out.println("book category : "+eElement.getAttribute("category"));
@@ -46,6 +47,7 @@ public class xmlDomParsingTest {
 				System.out.println("author : "+eElement.getElementsByTagName("author").item(0).getTextContent());
 				System.out.println("year : "+eElement.getElementsByTagName("year").item(0).getTextContent());
 				System.out.println("price : "+eElement.getElementsByTagName("price").item(0).getTextContent());
+				
 			}
 			
 		}
